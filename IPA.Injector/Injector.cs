@@ -74,14 +74,7 @@ namespace IPA.Injector
 
                 SelfConfig.ReadCommandLine(Environment.GetCommandLineArgs());
                 SelfConfig.Load();
-                DisabledConfig.Load();
-
-                if (AntiPiracy.IsInvalid(Environment.CurrentDirectory))
-                {
-                    loader.Error("Invalid installation; please buy the game to run BSIPA.");
-
-                    return;
-                }
+                DisabledConfig.Load()
 
                 CriticalSection.Configure();
 
